@@ -1,12 +1,18 @@
-<html ng-app="factoryApp">
+<!doctype html>
+<html ng-app="hello">
 <head>
     <script src="angular.min.js"></script>
     <link rel="stylesheet" href="bootstrap.min.css" />
     <script src="app.js" ></script>
+    <script src="factory.js" ></script>
+    
+    
 </head>
-<body>
-    Hello
-
-
+<body >
+    <section ng-controller="HomeController as home">
+        <h2>{{home.test}}</h2>
+        <pre>{{home | json}}</pre>
+    </section>
+    
 </body>
 </html>
