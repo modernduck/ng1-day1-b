@@ -22,8 +22,17 @@ angular.module('myFactory', []).factory("userProvider",  () => {
             //write the logic;
             //generate new id for user( users.length + som??)
             //
+
             var now = new Date();
-            now.getTime();//
+            console.log('create user from factory' )
+            var obj = {
+                id:now.getTime(),
+                name:name,
+                age:age,
+                salary:salary,
+                picture:picture
+            }
+            users.push(obj);
         },
         getUsers : () => {
             return  users;
